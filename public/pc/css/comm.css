@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.body_bg{
+    background-color: #222d32;
+}
+
+.login_box{
+    margin-top: 150px;
+}
+.login_box h1{
+    font-size: 22px;
+    padding: 10px;
+}
+.panel-body .form-group .btn-primary{
+    background-color: #f2dede ;
+    border-color: #ebccd1 ;
+    color: #0f0f0f;
+}
