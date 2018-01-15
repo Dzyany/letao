@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商场首页</title>
+    prel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<div class="lt_container">
+    <div class="lt_header">
+        <a href="#"><span class="mui-icon mui-icon-left-nav ico_left"></span></a>
+        <h4 class="title">乐淘云购</h4>
+        <a href="#"><span class="mui-icon mui-icon-search ico_right"></span></a>
+    </div>
+    <div class="lt_main">
+        <div class="category_lf">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul>
+                        <li><a href="javascript:;" class="now">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                        <li><a href="javascript:;">运动馆</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="category_rf">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                     <ul>
+                         <!--这里放置真实显示的DOM内容-->
+                         <li>
+                             <a href="#" >
+                                 <img src="./images/brand1.png" alt="">
+                                 <p>耐克</p>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <img src="./images/brand1.png" alt="">
+                                 <p>耐克</p>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <img src="./images/brand1.png" alt="">
+                                 <p>耐克</p>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <img src="./images/brand1.png" alt="">
+                                 <p>耐克</p>
+                             </a>
+                         </li>
+                     </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="lt_footer">
+        <ul>
+            <li >
+                <a href="index.html" >
+                    <i class="fa fa-home"></i>
+                    <p >主页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html" class="now">
+                    <i class="fa fa-bars"></i>
+                    <p class="now">分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-user"></i>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script src="lib/mui/js/mui.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/category.js"></script>
+<script type="text/html" id="tmp_top">
+   {{each rows v i}}
+   <li data-id="{{v.id}}"><a href="javascript:;" >{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tmp_second">
+    {{each rows v i}}
+    <li>
+        <a href="#">
+            <img src="{{v.brandLogo}}" alt="">
+            <p>{{v.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>

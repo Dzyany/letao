@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.nav {
+  padding: 10px 10px;
+}
+.nav li {
+  float: left;
+  width: 33.33333333%;
+}
+.nav li img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.pro {
+  width: 100%;
+  padding: 10px;
+}
+.pro a {
+  width: 48%;
+  float: right;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+.pro a img {
+  width: 100%;
+}
+.pro a:nth-child(odd) {
+  float: left;
+}

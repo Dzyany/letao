@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./css/first.css">
 </head>
 <body>
 <!--侧边栏-->
@@ -57,6 +58,24 @@
                 <li class="active">一级分类</li>
             </ol>
 
+            <div class="lt_content">
+                <button type="button" class="btn btn-default btn_addFirst">添加分类</button>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                       <tr>
+                           <th >序号</th>
+                           <th>分类名称</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>11</td>
+                          <td>22</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
@@ -79,6 +98,30 @@
         </div>
     </div>
 </div>
+<!--添加一级分类模态框-->
+<div class="modal fade bs-example-modal-sm" id="addFirst" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form1">
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" id="proFirstName" placeholder="请输入一级分类">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" form="form1" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
@@ -86,4 +129,15 @@
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js2/comm.js"></script>
+<script src="js2/first.js"></script>
+<script type="text/html" id="tmp_data">
+{{each rows v i}}
+
+<tr>
+    <td>{{(page-1)*i+i+1}}</td>
+    <td>{{v.categoryName}}</td>
+</tr>
+    {{/each}}
+</script>
