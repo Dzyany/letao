@@ -29,9 +29,11 @@ html,body{
     width: 180px;
     height: 100%;
     background-color: #222d32;
-    position: absolute;
+    position: fixed;
     left: 0;
+    top: 0;
     transition: all .5s;
+    z-index: 999;
 }
 .side .letao_ico{
     width: 100%;
@@ -101,12 +103,23 @@ html,body{
     height: 50px;
     width: 100%;
     background-color:#3c8dbc;
+    position: fixed;
+    top:0;
+    left: 0;
+    transition: all .5s;
+    padding-left: 180px;
+}
+.main_top.now{
+    padding-left: 0;
 }
 .main_top i{
     line-height: 45px;
     margin: auto 20px;
     color: #ffffff;
     font-size: 20px;
+}
+.main_body{
+    padding-top:50px ;
 }
 /*路径导航*/
 .main .main_body ol{

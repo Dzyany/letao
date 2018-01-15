@@ -20,18 +20,49 @@
                 $('#paginator').bootstrapPaginator({
                     //版本号
                     bootstrapMajorVersion: 3,
+                    alignment:"center", // 插件对齐方式
                     //当前页
                     currentPage:page,
                     //设置控件显示的页码数
-                    numberOfPages: 10,
+                    numberOfPages:5,
                     //设置总页数
-                    totalPages: info.total / pageSize,
+                    totalPages:Math.ceil(info.total / pageSize) ,
                     //为操作按钮绑定click事件
                     onPageClicked:function(event, originalEvent, type, p){
                         page=p;
                         render();
 
-                    }
+                    },
+                    itemTexts:function(type, page, current){
+                        switch (type){
+                            case 'first':
+                                return '第一页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return '下一页';
+                            case'last':
+                                return '最后一页';
+                            case 'page':
+                                return page;
+                        }
+                    },
+                    tooltipTitles:function(type, page, current){
+                        switch (type){
+                            case 'first':
+                                return '第一页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return '下一页';
+                            case'last':
+                                return '最后一页';
+                            case 'page':
+                                return page;
+                        }
+                    },
+                    //设置所有操作按钮是显示
+
                 });
             }
 

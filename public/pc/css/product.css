@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.mb_20{
+    margin-bottom: 20px;
+}
+.lt_content>table>tbody>tr>td,
+.lt_content>table>thead>tr>th
+{
+    vertical-align: middle;
+}
+.modal-body{
+    margin: 0 20px;
+}
+.img_box img{
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin-right: 10px;
+}

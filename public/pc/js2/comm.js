@@ -4,25 +4,22 @@
 $(function(){
     //参数设置
     NProgress.configure({ showSpinner: false });  //让加载的小圈不显示
-
+    //页面加载进度条
     $(document).ajaxStart(function(){
         NProgress.start();
     });
     $(document).ajaxStop(function(){
         setTimeout(function(){
             NProgress.done();
-        },1000);
+        },300);
     });
 
-    //$('#menu').on('click',function(){
-    //    $('.side').toggle();
-    //    $('.main').css('padding-left','0');
-    //});
-
+    //全屏显示
     $('#menu').on('click',function(){
 
             $('.side').toggleClass('now');
             $('.main').toggleClass('now');
+            $('.main_top').toggleClass('now');
 
     });
 
@@ -32,7 +29,7 @@ $(function(){
             type:'get',
             url:'/employee/checkRootLogin',
             success:function(info){
-                console.log(info);
+              //  console.log(info);
                 if(info.error){
                     location.href="login.html";
                 }
@@ -42,12 +39,13 @@ $(function(){
             }
         })
     }
+     //点击退出显示退出模态框
      $('#btn_exit').on('click',function(){
          //alert('haha');
          //    调用退出模态事件
        $('#myModal').modal('show');
      });
-
+    //确认退出登录
     $('.confirm').on('click',function(){
         $.ajax({
             type:'get',
@@ -60,7 +58,7 @@ $(function(){
             }
         })
     });
-
+   //侧边栏二级菜单点击切换显示
     $('.nav li>a').on('click',function(){
         $(this).next().slideToggle();
     })
